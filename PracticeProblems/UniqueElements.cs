@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace PracticeProblems
 {
-    public class DuplicateElements
+    public class UniqueElements
     {
-        public void CountDuplicatesElements()
+        public void PrintUniqueElements()
         {
             Console.WriteLine("Enter the limit of array:");
             int n = Convert.ToInt32(Console.ReadLine());
@@ -18,25 +18,19 @@ namespace PracticeProblems
             {
                 ar[i] = Convert.ToInt32(Console.ReadLine());
             }
-            var dict = new Dictionary<int, int>();
-            foreach (var value in ar)
+            HashSet<int> uniqueElements = new HashSet<int>();
+            foreach (int element in ar)
             {
-                if (dict.ContainsKey(value))
+                if (!uniqueElements.Contains(element))
                 {
-                    dict[value]++;
-                }
-                else
-                { 
-                    dict[value] = 1;
+                    uniqueElements.Add(element);
                 }
             }
-            int count = 0;
-            foreach (var data in dict)
+            Console.WriteLine("Unique elements in the array:");
+            foreach (int element in uniqueElements)
             {
-                if (data.Value > 1)
-                    count += data.Value;
+                Console.WriteLine(element + " ");
             }
-            Console.WriteLine("Total number of duplicate elements: " + count);
         }
     }
 }
