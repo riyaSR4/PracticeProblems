@@ -10,7 +10,8 @@ namespace PracticeProblems
             while (flag)
             {
                 Console.WriteLine("Enter input to be executed\n 1.Count No.of duplicate elements in an array\n " +
-                    "2.Print all unique elements in an array\n 3.Exit\n");
+                    "2.Print all unique elements in an array\n 3.Count the frequency of each element of an array\n " +
+                    "4.Exit\n");
                 int input = Convert.ToInt32(Console.ReadLine());
                 switch (input)
                 {
@@ -23,6 +24,10 @@ namespace PracticeProblems
                         uniqueElements.PrintUniqueElements();
                         break;
                     case 3:
+                        Frequency frequency = new Frequency();
+                        frequency.CountFrequency();
+                        break;
+                    case 4:
                         flag = false;
                         break;
                 }
