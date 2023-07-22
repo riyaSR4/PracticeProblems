@@ -12,7 +12,8 @@ namespace PracticeProblems
                 Console.WriteLine("Enter input to be executed\n 1.Count No.of duplicate elements in an array\n " +
                     "2.Print all unique elements in an array\n 3.Count the frequency of each element of an array\n " +
                     "4.Find maximum and minimum element in an array\n 5.Print pattern\n 6.Print second pattern\n " +
-                    "7.Reverse each word in a string\n 8.Find sum of all digits of a given number\n 9.Exit\n");
+                    "7.Reverse each word in a string\n 8.Find sum of all digits of a given number\n " +
+                    "9.Convert every word first letter as capital\n 10.Exit\n");
                 int input = Convert.ToInt32(Console.ReadLine());
                 switch (input)
                 {
@@ -49,6 +50,10 @@ namespace PracticeProblems
                         sumOfDigits.FindSumOfDigits();
                         break;
                     case 9:
+                        ConvertToCapital convertToCapital = new ConvertToCapital();
+                        convertToCapital.ConvertLetterAsCapital();
+                        break;
+                    case 10:
                         flag = false;
                         break;
                 }
