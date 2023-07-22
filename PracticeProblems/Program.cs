@@ -13,7 +13,8 @@ namespace PracticeProblems
                     "2.Print all unique elements in an array\n 3.Count the frequency of each element of an array\n " +
                     "4.Find maximum and minimum element in an array\n 5.Print pattern\n 6.Print second pattern\n " +
                     "7.Reverse each word in a string\n 8.Find sum of all digits of a given number\n " +
-                    "9.Convert every word first letter as capital\n 10.Exit\n");
+                    "9.Convert every word first letter as capital\n " +
+                    "10.Find two lowest numbers from array and sum\n 11.Exit\n");
                 int input = Convert.ToInt32(Console.ReadLine());
                 switch (input)
                 {
@@ -54,6 +55,10 @@ namespace PracticeProblems
                         convertToCapital.ConvertLetterAsCapital();
                         break;
                     case 10:
+                        LowestNumbers lowestNumbers = new LowestNumbers();
+                        lowestNumbers.LowestNumbersAndSum();
+                        break;
+                    case 11:
                         flag = false;
                         break;
                 }
